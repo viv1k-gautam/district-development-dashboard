@@ -20,6 +20,6 @@ Indicators are min-max normalized across the six demonstration districts. Higher
 
 The intended long format is `district_code,district,state,year,sector,indicator,value,unit,source,published_at`. A production ETL pipeline still needs source validation, district/LGD code reconciliation, boundary versioning, missing-value rules, outlier review, and auditable ingestion. Forecasting, persistent indicator storage, and official boundary map rendering remain future implementation work.
 
-## Deploy to Render
+## Free deployment on PythonAnywhere
 
-The root `render.yaml` is a Render Blueprint for the Django API, Vite static frontend, and PostgreSQL database. Push this repository to GitHub, choose **New + → Blueprint** in Render, connect the repository, review the resources, and apply the Blueprint. It wires the API URL, CORS origin, Django secret, database URL, frontend SPA rewrite, and database migrations. The database is configured on Render's free plan for a demo; Render says free PostgreSQL expires after 30 days. Upgrade it before storing data you need to keep.
+The free account supports one Django web app with persistent files. The deployment serves the Vite build and Django API from the same origin, using SQLite on the persistent account filesystem. Free accounts have low resource limits and a restricted outbound allowlist; this prototype does not need outbound API access to run. See `docs/pythonanywhere-deploy.md` for the WSGI, virtualenv, static-files, and reload steps. Free accounts are for demos and learning, not high-availability production.
