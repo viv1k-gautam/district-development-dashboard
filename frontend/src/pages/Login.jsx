@@ -109,7 +109,7 @@ export default function Login() {
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/static/frontend/login-bg.png')",
+          backgroundImage: `url("${import.meta.env.BASE_URL}login-bg.png")`,
         }}
       />
 
@@ -121,7 +121,7 @@ export default function Login() {
 
       {/* Decorative India map: public/india-map.png */}
       <img
-        src="/static/frontend/india-map.png"
+        src={`${import.meta.env.BASE_URL}india-map.png`}
         alt=""
         aria-hidden="true"
         draggable="false"

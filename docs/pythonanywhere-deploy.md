@@ -9,7 +9,11 @@ From the repository root, run:
 ```powershell
 cd frontend
 npm ci
+$env:VITE_BASE_PATH = "/static/frontend/"
+$env:VITE_BUILD_DIR = "../backend/static/frontend"
 npm run build
+Remove-Item Env:VITE_BASE_PATH
+Remove-Item Env:VITE_BUILD_DIR
 cd ..
 ```
 

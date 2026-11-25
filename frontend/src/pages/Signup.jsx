@@ -62,7 +62,7 @@ export default function Signup() {
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 scale-110 bg-cover bg-center blur-sm"
-        style={{ backgroundImage: "url('/static/frontend/login-bg.png')" }}
+        style={{ backgroundImage: `url("${import.meta.env.BASE_URL}login-bg.png")` }}
       />
       <div
         aria-hidden="true"
