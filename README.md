@@ -19,3 +19,7 @@ Indicators are min-max normalized across the six demonstration districts. Higher
 ## CSV integration contract
 
 The intended long format is `district_code,district,state,year,sector,indicator,value,unit,source,published_at`. A production ETL pipeline still needs source validation, district/LGD code reconciliation, boundary versioning, missing-value rules, outlier review, and auditable ingestion. Forecasting, persistent indicator storage, and official boundary map rendering remain future implementation work.
+
+## Deploy to Render
+
+The root `render.yaml` is a Render Blueprint for the Django API, Vite static frontend, and PostgreSQL database. Push this repository to GitHub, choose **New + → Blueprint** in Render, connect the repository, review the resources, and apply the Blueprint. It wires the API URL, CORS origin, Django secret, database URL, frontend SPA rewrite, and database migrations. The database is configured on Render's free plan for a demo; Render says free PostgreSQL expires after 30 days. Upgrade it before storing data you need to keep.

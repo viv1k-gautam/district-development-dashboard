@@ -2,7 +2,7 @@ import {
   getAccessToken, getRefreshToken, updateAccessToken, logout,
 } from "./auth";
 
-const BASE_URL = import.meta.env.VITE_API_URL ?? "http://127.0.0.1:8000";
+const BASE_URL = import.meta.env.VITE_API_URL ?? (import.meta.env.PROD ? "" : "http://127.0.0.1:8000");
 
 // Django ke errors ({email: ["..."], password: ["...", "..."]}) ko ek message mein badalta hai
 function errorMessage(data, fallback) {

@@ -12,6 +12,13 @@ from .serializers import LoginSerializer, SignupSerializer, UserSerializer
 User = get_user_model()
 
 
+class HealthView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        return Response({"status": "ok"})
+
+
 def tokens_for(user):
     refresh = RefreshToken.for_user(user)
     return {"access": str(refresh.access_token), "refresh": str(refresh)}
