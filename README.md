@@ -8,6 +8,20 @@ A React + Django prototype based on the project synopsis. The UI includes a five
 2. Frontend: in another terminal, `cd frontend`, run `npm install` once and `npm run dev`.
 3. Open the Vite URL and create an account or sign in.
 
+## Run the Streamlit version
+
+1. Create/activate a Python environment and install root dependencies: `python -m pip install -r requirements.txt`.
+2. Run `streamlit run streamlit_app.py` from the repository root.
+3. Open the local URL shown in the terminal.
+
+### Deploy on Streamlit Community Cloud
+
+1. Push the repository to GitHub.
+2. In Streamlit Community Cloud, create an app from `viv1k-gautam/district-development-dashboard`, branch `main`, file `streamlit_app.py`.
+3. Deploy. The app uses the root `requirements.txt` and needs no secrets.
+
+The Streamlit version is a self-contained dashboard prototype using the same illustrative dataset. It does not use the Django login/API. The existing Render deployment remains separately available.
+
 ## Data status
 
 All seeded dashboard observations, district metadata, and historical points are illustrative demonstration data, not verified government statistics. The source register records candidate public datasets only; it does not claim that those datasets have been ingested. Do not use the sample scores for planning or policy decisions.
