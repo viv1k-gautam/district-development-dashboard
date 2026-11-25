@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@media (min-width: 1024px) {
+  html.login-scale {
+    font-size: clamp(10px, 1.5625vh, 20px);
+  }
+}
